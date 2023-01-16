@@ -37,4 +37,24 @@ class QueueTest: XCTestCase{
         XCTAssertEqual(queue.count, 0)
         XCTAssertEqual(queue.front, nil)
     }
+    
+    func testMakeEmpty() -> Void {
+        var queue = Queue<Int>([])
+        
+        queue.enqueue(3)
+        queue.enqueue(4)
+        XCTAssertNotNil(queue.dequeue())
+        XCTAssertNotNil(queue.dequeue())
+        XCTAssertNil(queue.dequeue())
+        
+        queue.enqueue(5)
+        XCTAssertEqual(queue.count, 1)
+        XCTAssertEqual(queue.front, 5)
+        
+        let result = queue.dequeue()
+        XCTAssertEqual(result, 5)
+        XCTAssertTrue(queue.isEmpty)
+        XCTAssertEqual(queue.count, 0)
+        XCTAssertEqual(queue.front, nil)
+    }
 }
