@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA866B229765FF10000A6CF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B129765FF10000A6CF /* Stack.swift */; };
+		ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B32976605F0000A6CF /* Queue_Optimize.swift */; };
 		ACEF79552975951400C5DB8C /* DataStructureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79542975951400C5DB8C /* DataStructureApp.swift */; };
 		ACEF79572975951400C5DB8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79562975951400C5DB8C /* ContentView.swift */; };
 		ACEF79592975951500C5DB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEF79582975951500C5DB8C /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACA866B129765FF10000A6CF /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		ACA866B32976605F0000A6CF /* Queue_Optimize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue_Optimize.swift; sourceTree = "<group>"; };
 		ACEF79512975951400C5DB8C /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF79542975951400C5DB8C /* DataStructureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureApp.swift; sourceTree = "<group>"; };
 		ACEF79562975951400C5DB8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				ACEF79662975951500C5DB8C /* DataStructureTests.swift */,
 				ACEF797F2975960200C5DB8C /* Queue.swift */,
+				ACA866B129765FF10000A6CF /* Stack.swift */,
+				ACA866B32976605F0000A6CF /* Queue_Optimize.swift */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */,
 				ACEF79672975951500C5DB8C /* DataStructureTests.swift in Sources */,
+				ACA866B229765FF10000A6CF /* Stack.swift in Sources */,
 				ACEF79802975960200C5DB8C /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
