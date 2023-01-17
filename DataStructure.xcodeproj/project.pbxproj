@@ -11,6 +11,7 @@
 		ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B32976605F0000A6CF /* Queue_Optimize.swift */; };
 		ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B72976A89F0000A6CF /* StackUnitTest.swift */; };
 		ACA866BB2976ABAA0000A6CF /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866BA2976ABAA0000A6CF /* Deque.swift */; };
+		ACA866BD2976AEA40000A6CF /* Deque_Optimize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866BC2976AEA40000A6CF /* Deque_Optimize.swift */; };
 		ACEF79552975951400C5DB8C /* DataStructureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79542975951400C5DB8C /* DataStructureApp.swift */; };
 		ACEF79572975951400C5DB8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79562975951400C5DB8C /* ContentView.swift */; };
 		ACEF79592975951500C5DB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEF79582975951500C5DB8C /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		ACA866B32976605F0000A6CF /* Queue_Optimize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue_Optimize.swift; sourceTree = "<group>"; };
 		ACA866B72976A89F0000A6CF /* StackUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackUnitTest.swift; sourceTree = "<group>"; };
 		ACA866BA2976ABAA0000A6CF /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
+		ACA866BC2976AEA40000A6CF /* Deque_Optimize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque_Optimize.swift; sourceTree = "<group>"; };
 		ACEF79512975951400C5DB8C /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF79542975951400C5DB8C /* DataStructureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureApp.swift; sourceTree = "<group>"; };
 		ACEF79562975951400C5DB8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				ACA866BA2976ABAA0000A6CF /* Deque.swift */,
+				ACA866BC2976AEA40000A6CF /* Deque_Optimize.swift */,
 			);
 			path = Deque;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				ACA866BB2976ABAA0000A6CF /* Deque.swift in Sources */,
 				ACA866B229765FF10000A6CF /* Stack.swift in Sources */,
 				ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */,
+				ACA866BD2976AEA40000A6CF /* Deque_Optimize.swift in Sources */,
 				ACEF79802975960200C5DB8C /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
