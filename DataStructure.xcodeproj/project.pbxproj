@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		ACA866B229765FF10000A6CF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B129765FF10000A6CF /* Stack.swift */; };
 		ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B32976605F0000A6CF /* Queue_Optimize.swift */; };
+		ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B72976A89F0000A6CF /* StackUnitTest.swift */; };
 		ACEF79552975951400C5DB8C /* DataStructureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79542975951400C5DB8C /* DataStructureApp.swift */; };
 		ACEF79572975951400C5DB8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79562975951400C5DB8C /* ContentView.swift */; };
 		ACEF79592975951500C5DB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEF79582975951500C5DB8C /* Assets.xcassets */; };
 		ACEF795C2975951500C5DB8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEF795B2975951500C5DB8C /* Preview Assets.xcassets */; };
-		ACEF79672975951500C5DB8C /* DataStructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79662975951500C5DB8C /* DataStructureTests.swift */; };
+		ACEF79672975951500C5DB8C /* QueueUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79662975951500C5DB8C /* QueueUnitTest.swift */; };
 		ACEF79712975951500C5DB8C /* DataStructureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79702975951500C5DB8C /* DataStructureUITests.swift */; };
 		ACEF79732975951500C5DB8C /* DataStructureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79722975951500C5DB8C /* DataStructureUITestsLaunchTests.swift */; };
 		ACEF79802975960200C5DB8C /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF797F2975960200C5DB8C /* Queue.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		ACA866B129765FF10000A6CF /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		ACA866B32976605F0000A6CF /* Queue_Optimize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue_Optimize.swift; sourceTree = "<group>"; };
+		ACA866B72976A89F0000A6CF /* StackUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackUnitTest.swift; sourceTree = "<group>"; };
 		ACEF79512975951400C5DB8C /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF79542975951400C5DB8C /* DataStructureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureApp.swift; sourceTree = "<group>"; };
 		ACEF79562975951400C5DB8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		ACEF795B2975951500C5DB8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACEF795D2975951500C5DB8C /* DataStructure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataStructure.entitlements; sourceTree = "<group>"; };
 		ACEF79622975951500C5DB8C /* DataStructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACEF79662975951500C5DB8C /* DataStructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTests.swift; sourceTree = "<group>"; };
+		ACEF79662975951500C5DB8C /* QueueUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueUnitTest.swift; sourceTree = "<group>"; };
 		ACEF796C2975951500C5DB8C /* DataStructureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF79702975951500C5DB8C /* DataStructureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITests.swift; sourceTree = "<group>"; };
 		ACEF79722975951500C5DB8C /* DataStructureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -78,6 +80,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACA866B52976A8800000A6CF /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				ACA866B32976605F0000A6CF /* Queue_Optimize.swift */,
+				ACEF79662975951500C5DB8C /* QueueUnitTest.swift */,
+				ACEF797F2975960200C5DB8C /* Queue.swift */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		ACA866B62976A8910000A6CF /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				ACA866B129765FF10000A6CF /* Stack.swift */,
+				ACA866B72976A89F0000A6CF /* StackUnitTest.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
 		ACEF79482975951400C5DB8C = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +142,8 @@
 		ACEF79652975951500C5DB8C /* DataStructureTests */ = {
 			isa = PBXGroup;
 			children = (
-				ACEF79662975951500C5DB8C /* DataStructureTests.swift */,
-				ACEF797F2975960200C5DB8C /* Queue.swift */,
-				ACA866B129765FF10000A6CF /* Stack.swift */,
-				ACA866B32976605F0000A6CF /* Queue_Optimize.swift */,
+				ACA866B62976A8910000A6CF /* Stack */,
+				ACA866B52976A8800000A6CF /* Queue */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -278,8 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */,
-				ACEF79672975951500C5DB8C /* DataStructureTests.swift in Sources */,
+				ACEF79672975951500C5DB8C /* QueueUnitTest.swift in Sources */,
 				ACA866B229765FF10000A6CF /* Stack.swift in Sources */,
+				ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */,
 				ACEF79802975960200C5DB8C /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
