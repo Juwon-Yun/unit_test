@@ -5,6 +5,12 @@
 //  Created by 윤주원 on 2023/01/16.
 //
 
+/*
+ FIFO
+ 
+ Enqueuing is an O(1) operations, dequeuing is 0(n) operations.
+ If the Queue had been implemented with a linked list, then both would be 0(1)
+ */
 public struct Queue<T> {
     public init(_ element : [T]){
         array = element
