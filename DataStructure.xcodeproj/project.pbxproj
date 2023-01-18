@@ -12,6 +12,8 @@
 		ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866B72976A89F0000A6CF /* StackUnitTest.swift */; };
 		ACA866BB2976ABAA0000A6CF /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866BA2976ABAA0000A6CF /* Deque.swift */; };
 		ACA866BD2976AEA40000A6CF /* Deque_Optimize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866BC2976AEA40000A6CF /* Deque_Optimize.swift */; };
+		ACA866C02977FB6F0000A6CF /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866BF2977FB6F0000A6CF /* PriorityQueue.swift */; };
+		ACA866C32977FC200000A6CF /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA866C22977FC200000A6CF /* Heap.swift */; };
 		ACEF79552975951400C5DB8C /* DataStructureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79542975951400C5DB8C /* DataStructureApp.swift */; };
 		ACEF79572975951400C5DB8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEF79562975951400C5DB8C /* ContentView.swift */; };
 		ACEF79592975951500C5DB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEF79582975951500C5DB8C /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		ACA866B72976A89F0000A6CF /* StackUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackUnitTest.swift; sourceTree = "<group>"; };
 		ACA866BA2976ABAA0000A6CF /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		ACA866BC2976AEA40000A6CF /* Deque_Optimize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque_Optimize.swift; sourceTree = "<group>"; };
+		ACA866BF2977FB6F0000A6CF /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		ACA866C22977FC200000A6CF /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		ACEF79512975951400C5DB8C /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF79542975951400C5DB8C /* DataStructureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureApp.swift; sourceTree = "<group>"; };
 		ACEF79562975951400C5DB8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,22 @@
 			path = Deque;
 			sourceTree = "<group>";
 		};
+		ACA866BE2977FB5A0000A6CF /* PriorityQueue */ = {
+			isa = PBXGroup;
+			children = (
+				ACA866BF2977FB6F0000A6CF /* PriorityQueue.swift */,
+			);
+			path = PriorityQueue;
+			sourceTree = "<group>";
+		};
+		ACA866C12977FC170000A6CF /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				ACA866C22977FC200000A6CF /* Heap.swift */,
+			);
+			path = Heap;
+			sourceTree = "<group>";
+		};
 		ACEF79482975951400C5DB8C = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +175,8 @@
 		ACEF79652975951500C5DB8C /* DataStructureTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACA866C12977FC170000A6CF /* Heap */,
+				ACA866BE2977FB5A0000A6CF /* PriorityQueue */,
 				ACA866B92976AB980000A6CF /* Deque */,
 				ACA866B62976A8910000A6CF /* Stack */,
 				ACA866B52976A8800000A6CF /* Queue */,
@@ -310,11 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA866C32977FC200000A6CF /* Heap.swift in Sources */,
 				ACA866B42976605F0000A6CF /* Queue_Optimize.swift in Sources */,
 				ACEF79672975951500C5DB8C /* QueueUnitTest.swift in Sources */,
 				ACA866BB2976ABAA0000A6CF /* Deque.swift in Sources */,
 				ACA866B229765FF10000A6CF /* Stack.swift in Sources */,
 				ACA866B82976A89F0000A6CF /* StackUnitTest.swift in Sources */,
+				ACA866C02977FB6F0000A6CF /* PriorityQueue.swift in Sources */,
 				ACA866BD2976AEA40000A6CF /* Deque_Optimize.swift in Sources */,
 				ACEF79802975960200C5DB8C /* Queue.swift in Sources */,
 			);
