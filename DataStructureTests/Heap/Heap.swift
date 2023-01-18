@@ -61,16 +61,40 @@ public struct Heap<T>{
      인라인을 사용한 경우의 메소드 호출
      스택을 따로 추적하지 않고 메소드의 본문을 바로 가져다 사용함.
      장점 - 오버헤드 감소, 단점 - 함수가 재귀 함수인 경우 오히려 비효율적임.
-     
      */
+    
+    // index i를 인자로 받아 요소의 부모 인덱스를 반환함.
     @inline(__always) internal func parentIndex(ofIndex i : Int) -> Int {
         return (i - 1) / 2
     }
     
+    // index i를 인자로 받아 요소의 왼쪽 노드 자식을 반환함.
+    // 왼쪽 노드 자식이 없는 경우 힙의 크기보다 더 큰 값을 반환함.
+    @inline(__always) internal func leftChildIndex(ofIndex i : Int) -> Int {
+        return 2 * i + 1
+    }
+    
+    // index i를 인자로 받아 요소의 오른쪽 자식 노드를 반환함.
+    // 오른쪽 노드 자식이 없는 경우 힙의 크기보다 더 큰 값을 반환함.
+    @inline(__always) internal func rightChildIndex(ofIndex i : Int) -> Int{
+        return 2 * i + 2
+    }
+    
+    /*
+     자식 노드를 가져와 max-heap(부모가 더 작은 경우) 또는 min-heap(자식보다 작지 않은 경우)인 경우에 교환함.
+     */
     internal mutating func shiftUp(_ idx : Int){
-        let childIndex = idx
+        var childIndex = idx
         let child = nodes[childIndex]
-//        var parentIndex = parentIndex(ofindex)
+        var parentIndex = self.parentIndex(ofIndex: childIndex)
+        
+        while childIndex > 0 && orderCriteria(child, nodes[parentIndex]){
+            nodes[childIndex] = nodes[parentIndex]
+            childIndex = parentIndex
+            parentIndex = self.parentIndex(ofIndex: childIndex)
+        }
+        
+        nodes[childIndex] = child
     }
     
 }
