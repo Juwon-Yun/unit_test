@@ -97,5 +97,40 @@ public struct Heap<T>{
         nodes[childIndex] = child
     }
     
+    /*
+     부모 노드롤 보고 max-heap(자식 노드 보다 더 큼)인지 min-heap(자식 노드 보다 더 작음)인지 구별함.
+     */
+    internal mutating func shiftDown(from index: Int, until endIndex: Int){
+        let leftChildIndex = self.leftChildIndex(ofIndex: index)
+        let rightChildIndex = self.rightChildIndex(ofIndex: index)
+        
+        /*
+         정렬 함수로 힙의 부모 노드, 왼쪽 자식, 오른쪽 자식을 정렬함.
+        
+         부모 노드가 첫번째로 올떄까지 돌림.
+         
+         아닌 경우, 노드들을 가만히 안냅두고 힙이 원하는 대로 정렬될 때까지 "float down" 함.
+        
+         */
+        var first = index
+        
+        if leftChildIndex < endIndex && orderCriteria(nodes[leftChildIndex], nodes[first]){
+            first = leftChildIndex
+        }
+        
+        if rightChildIndex < endIndex && orderCriteria(nodes[rightChildIndex], nodes[first]){
+            first = rightChildIndex
+        }
+        
+        if first == index {return}
+        
+        nodes.swapAt(index, first)
+        shiftDown(from: first, until: endIndex)
+    }
+    
+    internal mutating func shiftDown(_ index: Int){
+        shiftDown(from: index, until: nodes.count)
+    }
+    
 }
 
