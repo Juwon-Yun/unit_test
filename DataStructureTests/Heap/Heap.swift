@@ -132,5 +132,23 @@ public struct Heap<T>{
         shiftDown(from: index, until: nodes.count)
     }
     
+    /*
+     max-heap인 경우 가장 큰 노드를 반환함.
+     min-heap인 경우 가장 작은 노드를 반환함.
+     */
+    public func peek() -> T?{
+        return nodes.first
+    }
+    
+    /*
+     새 노드를 힙에 저장하는데, max-heap 또는 min-heap이 유지되도록 재정렬함.
+     성능은 0(log n)
+     */
+    public mutating func insert(_ value : T){
+        nodes.append(value)
+        shiftUp(nodes.count - 1)
+    }
+    
+    
 }
 
