@@ -149,6 +149,17 @@ public struct Heap<T>{
         shiftUp(nodes.count - 1)
     }
     
+    /*
+      인자가 반복가능한 타입인 경우에 반복문으로 힙에 저장함.
+      max, min-heap 속성은 유지함.
+      성능은 0(log n).
+     */
+    public mutating func insert<S : Sequence>(_ sequence : S) where S.Iterator.Element == T {
+        for value in sequence {
+            insert(value)
+        }
+    }
+    
     
 }
 
