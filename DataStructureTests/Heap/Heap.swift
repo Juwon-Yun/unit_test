@@ -142,7 +142,7 @@ public struct Heap<T>{
     
     /*
      새 노드를 힙에 저장하는데, max-heap 또는 min-heap이 유지되도록 재정렬함.
-     성능은 0(log n)
+     성능은 O(log n)
      */
     public mutating func insert(_ value : T){
         nodes.append(value)
@@ -152,7 +152,7 @@ public struct Heap<T>{
     /*
       인자가 반복가능한 타입인 경우에 반복문으로 힙에 저장함.
       max, min-heap 속성은 유지함.
-      성능은 0(log n).
+      성능은 O(log n).
      */
     public mutating func insert<S : Sequence>(_ sequence : S) where S.Iterator.Element == T {
         for value in sequence {
@@ -160,6 +160,51 @@ public struct Heap<T>{
         }
     }
     
+    /*
+     @discardableResult
+     xcode에서 여러가지 warning을 띄워주는데, 특히 var 또는 let을 선언하고 사용하지 않는 경우.
+     예시로 컴파일러에게 변수가 사용안되어도 신경쓰지 마라는 의미로 사용함.
+     해당 함수에서 warning을 제거하는 키워드 또는 문구.
+    */
     
+    /*
+     힙에서 루트 노트를 제거함. max-heap에선 최대값 노드를 제거, min-heap에선 최솟값 노드를 제거.
+     성능은 O(log n)
+     */
+    @discardableResult public mutating func remove() -> T? {
+        guard !nodes.isEmpty else {return nil}
+        
+        if nodes.count == 1{
+            return nodes.removeLast()
+        } else {
+            let value = nodes[0]
+            nodes[0] = nodes.removeLast()
+            shiftDown(0)
+            return value
+        }
+    }
+    
+    /*
+     힙에서 해당 인자를 제거함.
+     해당 인자의 인덱스를 알아야한다.
+     성능은 O(log n)
+     */
+    @discardableResult public mutating func remove(at index: Int) -> T?{
+        guard index < nodes.count else {return nil}
+        
+        let size = nodes.count - 1
+        if index != size{
+            nodes.swapAt(index, size)
+            shiftDown(from: index, until: size)
+            shiftUp(index)
+        }
+        return nodes.removeLast()
+    }
+    
+    public mutating func replace(index i : Int, value : T){
+        guard i < nodes.count else {return}
+        remove(at: i)
+        
+    }
 }
 
