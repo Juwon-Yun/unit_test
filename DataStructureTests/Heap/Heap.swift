@@ -201,10 +201,38 @@ public struct Heap<T>{
         return nodes.removeLast()
     }
     
+    /*
+     노드 순서를 변경한다.
+     max-heap, min-heap의 속성은 유지한 채로 힙을 재정렬함.
+     */
     public mutating func replace(index i : Int, value : T){
         guard i < nodes.count else {return}
         remove(at: i)
         
+    }
+}
+
+extension Heap where T: Equatable {
+    /*
+     해당 노드의 인덱스를 반환한다. 성능은 O(n)
+     */
+    public func index(of node: T) -> Int? {
+        // index(where:)' is deprecated: renamed to 'firstIndex(where:)
+//        return nodes.index(where: { $0 == node} )
+        
+        // @FIXME: 위 메소드 리펙토링함.
+        return nodes.firstIndex(where: { $0 == node} )
+    }
+    
+    /*
+     힙에서 첫 번째 항목을 방출함. 루트 노드.
+     성능은 O(n)
+     */
+    @discardableResult public mutating func remove(node: T) -> T? {
+        if let index = index(of: node){
+            return remove(at: index)
+        }
+        return nil
     }
 }
 
