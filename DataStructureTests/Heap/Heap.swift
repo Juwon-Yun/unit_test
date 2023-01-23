@@ -34,7 +34,7 @@ public struct Heap<T>{
     private mutating func configureHeap(from array:[T]){
         nodes = array
         for i in stride(from: (nodes.count / 2 - 1), through: 0,by: -1){
-
+            shiftDown(i)
         }
     }
     
